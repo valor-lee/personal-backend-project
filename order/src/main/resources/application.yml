@@ -1,1 +1,15 @@
-spring.application.name=order
+server:
+  port: 8000
+spring:
+  application:
+    name: order
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    eureka-connection-idle-timeout-seconds: 30
+    eureka-server-connect-timeout-seconds: 5
+    eureka-server-read-timeout-seconds: 8
+    eureka-server-total-connections: 200

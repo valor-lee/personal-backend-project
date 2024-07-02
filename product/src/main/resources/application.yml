@@ -1,1 +1,14 @@
-spring.application.name=product
+server:
+  port: 8001
+spring:
+  application:
+    name: product
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    eureka-connection-idle-timeout-seconds: 30
+    eureka-server-connect-timeout-seconds: 5
+    eureka-server-read-timeout-seconds: 8
+    eureka-server-total-connections: 200
