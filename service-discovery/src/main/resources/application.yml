@@ -1,0 +1,23 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: service-discovery
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+  server:
+    # registry를 갱신할 수 없을 때 대기하는 시간
+    wait-time-in-ms-when-sync-empty: 1000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
